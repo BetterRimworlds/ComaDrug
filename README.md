@@ -29,6 +29,7 @@ The drug is balanced to:
 - Provide medical benefits for injured pawns.
 - Not cause addiction or tolerance.
 - Have a controlled duration.
+- Colonists need to be a Crafting skill of level 8 and an Intellectual skill of level 10.
 
 ## Compatibility
 - Compatible with RimWorld 1.2+.
