@@ -1,0 +1,45 @@
+I am making a ComaDrug for Rimworld with this config:
+
+	<ThingDef ParentName="DrugPillBase">
+		<defName>ComaDrug</defName>
+		<label>Coma Drug</label>
+		<description>A neurodegenerative drug that induces a medical coma.</description>
+		<!-- <descriptionHyperlinks>
+			<HediffDef>CatatonicBreakdown</HediffDef>
+		</descriptionHyperlinks> -->
+		<graphicData>
+			<texPath>Things/Item/Resource/Medicine/MedicineIndustrial</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<rotatable>false</rotatable>
+		<statBases>
+			<MarketValue>700</MarketValue>
+			<Mass>0.01</Mass>
+		</statBases>
+		<techLevel>Ultra</techLevel>
+		<minRewardCount>1</minRewardCount>
+		<ingestible>
+			<drugCategory>Medical</drugCategory>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>ComoDrugHigh</hediffDef>
+					<!-- <hediffDef>PenoxycylineHigh</hediffDef> -->
+					<severity>1.00</severity>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<listOrder>1000</listOrder>
+				<overdoseSeverityOffset>0.08~0.14</overdoseSeverityOffset>
+			</li>
+		</comps>
+		<tradeTags>
+			<li>ExoticMisc</li>
+		</tradeTags>
+		<thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+	</ThingDef>
+
+It's to help colonists in desperate medical situations be placed in a medically-induced coma for 5.55 days, or more, as determined by their doctors.
+
+The mod is now working fine, but I need to give the chemists the ability to actually craft it like they can Medicine, at the Drug Lab. It needs to require Devilstrand, Medicine, and 1 Luciferium. They need a craft skill of 8 and Intellectual of 10.

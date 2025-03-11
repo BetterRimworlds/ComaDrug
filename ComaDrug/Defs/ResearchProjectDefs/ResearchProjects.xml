@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ResearchProjectDef>
+    <defName>MedicalComaDrug</defName>
+    <label>medical coma induction</label>
+    <description>Research specialized pharmaceuticals that can safely induce medical comas in patients. Coma induction is valuable for critical care situations, allowing patients to better survive severe injuries by reducing consciousness and preventing movement.</description>
+    <baseCost>1800</baseCost>
+    <techLevel>Spacer</techLevel>
+    <prerequisites>
+      <li>MedicineProduction</li>
+    </prerequisites>
+    <researchViewX>0</researchViewX>
+    <researchViewY>3</researchViewY>
+    <tab>GlitterTech</tab>
+    <tags>
+      <li>GlitterworldMedicine</li>
+    </tags>
+  </ResearchProjectDef>
+</Defs>
