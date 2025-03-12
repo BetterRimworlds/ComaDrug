@@ -12,8 +12,10 @@
     <researchViewX>0</researchViewX>
     <researchViewY>3</researchViewY>
     <tab>GlitterTech</tab>
+<!--
     <tags>
       <li>GlitterworldMedicine</li>
     </tags>
+-->
   </ResearchProjectDef>
 </Defs>

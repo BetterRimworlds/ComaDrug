@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
     <ResearchTabDef>
-        <defName>GlitterWorlds</defName>
-        <label>Glitter Worlds</label>
+        <defName>GlitterTech</defName>
+        <label>Glitter Tech</label>
     </ResearchTabDef>
 </Defs>
