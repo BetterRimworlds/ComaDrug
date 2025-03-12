@@ -1,0 +1,1 @@
+I have created a Rimworld mod called ComaDrug that introduces medically-induced comas. Can you think of an XML configuration to the ComaDrugHigh that reduces the hunger rate appropately for a coma patient?

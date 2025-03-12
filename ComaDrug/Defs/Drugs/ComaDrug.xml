@@ -70,6 +70,8 @@
 						<setMax>0.0</setMax>
 					</li>
 				</capMods>
+				<!-- Reduce hunger rate to 15% of normal -->
+				<hungerRateFactor>0.15</hungerRateFactor>
 			</li>
 		</stages>
 	</HediffDef>
@@ -82,7 +84,6 @@
     <jobString>Making Coma Drug.</jobString>
     <effectWorking>Cremate</effectWorking>
     <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
-    <efficiencyStat>DrugSynthesisEfficiency</efficiencyStat>
     <workAmount>400</workAmount>
     <researchPrerequisite>MedicalComaDrug</researchPrerequisite>
     <recipeUsers>
@@ -136,7 +137,6 @@
     <jobString>Making 5 Coma Drugs.</jobString>
     <effectWorking>Cremate</effectWorking>
     <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
-    <efficiencyStat>DrugSynthesisEfficiency</efficiencyStat>
     <workAmount>1000</workAmount>
     <researchPrerequisite>MedicalComaDrug</researchPrerequisite>
     <recipeUsers>

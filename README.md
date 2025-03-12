@@ -30,6 +30,7 @@ The drug is balanced to:
 - Not cause addiction or tolerance.
 - Have a controlled duration.
 - Colonists need to be a Crafting skill of level 8 and an Intellectual skill of level 10.
+- Reduces the hunger need by 85% to match real-world conditions.
 
 ## Compatibility
 - Compatible with RimWorld 1.2+.
@@ -43,7 +44,7 @@ The drug is balanced to:
 
 ## Change Log
 
-**v1.0.0: 2024-04-29**
+**v1.0.0: 2025-03-11**
 * Initial Release
 
 ## Better Rimworlds Stargate Mods
