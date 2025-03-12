@@ -44,6 +44,10 @@ The drug is balanced to:
 
 ## Change Log
 
+**v1.0.1: 2025-03-12**
+* **[2025-03-11 23:10:29 CDT]** Fixes to the research config.
+* **[2025-03-11 23:10:38 CDT]** Reduce hunger by 85% to match real-world conditions.
+
 **v1.0.0: 2025-03-11**
 * Initial Release
 
