@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+<!-- ==== ComaDrug/Defs/HediffDefs/ComaDrugHigh.xml ==== -->
 <Defs>
     <HediffDef>
         <defName>ComaDrugHigh</defName>
@@ -42,6 +43,10 @@
             </li>
             <li Class="BetterRimworlds.ComaDrug.HediffCompProperties_WakeOnHediff">
                 <wakeHediff>WakeUpHigh</wakeHediff>
+            </li>
+            <li Class="BetterRimworlds.ComaDrug.HediffCompProperties_HealFasterInComa">
+                <healFactor>5.0</healFactor>
+                <intervalTicks>60</intervalTicks>
             </li>
         </comps>
         <stages>
