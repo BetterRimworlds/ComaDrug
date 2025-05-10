@@ -16,6 +16,6 @@ using RimWorld;
 
 public class NeedLevel
 {
-    public NeedDef needDef;
+    public NeedDef needDef = null!;
     public float minLevel;
 }

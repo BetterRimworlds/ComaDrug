@@ -59,7 +59,7 @@ public class HediffComp_MinimumNeed : HediffComp
 public class HediffCompProperties_MinimumNeed : HediffCompProperties
 {
     // This will hold the list of <needs> from the XML.
-    public List<NeedLevel> needs;
+    public List<NeedLevel> needs = null!;
 
     public HediffCompProperties_MinimumNeed()
     {

@@ -8,7 +8,7 @@
 *.exe
 
 **/bin
-**/obj
+**/obj/
 
 .vs
 .idea/

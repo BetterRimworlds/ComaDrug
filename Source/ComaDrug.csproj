@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net472</TargetFramework>
-    <LangVersion>10</LangVersion>
+    <LangVersion>11</LangVersion>
     <OutputType>Library</OutputType>
     <RootNamespace>BetterRimworlds.ComaDrug</RootNamespace>
     <AssemblyName>ComaDrug</AssemblyName>

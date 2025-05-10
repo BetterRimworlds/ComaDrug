@@ -19,13 +19,13 @@ using Verse;
 
 public class NeedRateModifier
 {
-    public NeedDef needDef;
+    public NeedDef needDef = null!;
     public float   rateFactor = 1f;
 }
 
 public class HediffCompProperties_ModifyNeedRate : HediffCompProperties
 {
-    public List<NeedRateModifier> needs;
+    public List<NeedRateModifier> needs = null!;
     public HediffCompProperties_ModifyNeedRate()
     {
         this.compClass = typeof(HediffComp_ModifyNeedRate);
