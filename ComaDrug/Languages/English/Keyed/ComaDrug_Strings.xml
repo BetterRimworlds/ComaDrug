@@ -5,12 +5,12 @@
   <ComaDrug.label>Coma Drug</ComaDrug.label>
   <ComaDrug.description>A neurodegenerative drug that induces a medical coma for 5.55 days.</ComaDrug.description>
 
-  <!-- HediffDef: ComoDrugHigh -->
-  <ComoDrugHigh.label>Coma Drug Effect</ComoDrugHigh.label>
-  <ComoDrugHigh.description>Causes a Drug-induced coma that lasts 5.55 days.</ComoDrugHigh.description>
+  <!-- HediffDef: ComaDrugHigh -->
+  <ComaDrugHigh.label>Coma Drug Effect</ComaDrugHigh.label>
+  <ComaDrugHigh.description>Causes a Drug-induced coma that lasts 5.55 days.</ComaDrugHigh.description>
 
   <!-- Stage label example -->
-  <ComoDrugHigh.stages.MedicalComa.label>Medical Coma</ComoDrugHigh.stages.MedicalComa.label>
-  <ComoDrugHigh.stages.MedicalComa.description>A medically induced coma.</ComoDrugHigh.stages.MedicalComa.description>
+  <ComaDrugHigh.stages.MedicalComa.label>Medical Coma</ComaDrugHigh.stages.MedicalComa.label>
+  <ComaDrugHigh.stages.MedicalComa.description>A medically induced coma.</ComaDrugHigh.stages.MedicalComa.description>
 
 </LanguageData>

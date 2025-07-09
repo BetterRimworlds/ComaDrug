@@ -1,14 +1,14 @@
 Many times in Rimworld, there are situations that require a colonist to be put into a long-term sleep state. Anaethesia
-only keeps them asleep for maybe 8 hours, sometimes less. This causes heavily injured colonists to get up and hurt 
+only keeps them asleep for maybe 8 hours, sometimes less. This causes heavily injured colonists to get up and hurt
 themselves more.
 
-I am creating a new mod called Coma Drug, a drug which licensed medical professionals can give colonists to induce a 
+I am creating a new mod called Coma Drug, a drug which licensed medical professionals can give colonists to induce a
 3-day medically-induced coma, via the Hediff CatatonicBreakdown.
 
 Here is the hediff for the actual medically-induced coma:
 
 	<HediffDef>
-		<defName>ComoDrugHigh</defName>
+		<defName>ComaDrugHigh</defName>
 		<hediffClass>Hediff_High</hediffClass>
 		<label>comadrug</label>
 		<description>Causes a Drug-induced coma that lasts 3 days.</description>

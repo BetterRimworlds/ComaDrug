@@ -8,7 +8,6 @@ if [ -z "$(which inotifywait)" ]; then
 fi
 
 # Directory to monitor for changes
-dir="./Source"
 MOD=$(basename $PWD)
 
 # Define the path to your solution file
@@ -16,8 +15,6 @@ solutionPath="Source/${MOD}.sln"
 
 # Define an array of configurations
 configurations=("v1.2" "v1.3" "v1.4" "v1.5" "v1.6")
-
-dotnet restore "$solutionPath"
 
 function sync_mod()
 {
@@ -44,14 +41,6 @@ function sync_mod()
 function build() {
     rm -rf /rimworld/1.2/Mods/${MOD}
 
-    # Loop through each configuration and build it
-    for config in "${configurations[@]}"; do
-        echo "Building for configuration: $config"
-        dotnet build --no-restore "$solutionPath" --configuration "Release $config" &
-    done
-
-    wait  # Blocks until all background jobs finish
-
     sync_mod
 
     echo "All builds completed!"
@@ -67,7 +56,7 @@ fi
 # Watch for changes to .cs and XML files in the directory and subdirectories
 inotifywait --recursive --monitor --format "%e %w%f" \
     --exclude '/\.idea($|/)' \
-    --event modify,move,create,delete "$dir" "$MOD" |
+    --event modify,move,create,delete "$MOD" |
     while read event fullpath; do
         if [[ "$fullpath" == "$dir"* && "$fullpath" == *.cs ]]; then
             echo "Running build for $fullpath"

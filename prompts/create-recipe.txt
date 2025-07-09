@@ -22,7 +22,7 @@ I am making a ComaDrug for Rimworld with this config:
 			<drugCategory>Medical</drugCategory>
 			<outcomeDoers>
 				<li Class="IngestionOutcomeDoer_GiveHediff">
-					<hediffDef>ComoDrugHigh</hediffDef>
+					<hediffDef>ComaDrugHigh</hediffDef>
 					<!-- <hediffDef>PenoxycylineHigh</hediffDef> -->
 					<severity>1.00</severity>
 				</li>
