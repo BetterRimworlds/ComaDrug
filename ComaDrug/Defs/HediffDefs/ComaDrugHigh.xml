@@ -59,6 +59,10 @@
                         <setMax>0.0</setMax>
                     </li>
                 </capMods>
+                <statFactors>
+                    <!-- Doubles the speed at which diseases are fought off. -->
+                    <ImmunityGainSpeed>2.0</ImmunityGainSpeed>
+                </statFactors>
                 <!-- Reduce hunger rate to 15% of normal -->
                 <hungerRateFactor>0.15</hungerRateFactor>
             </li>
