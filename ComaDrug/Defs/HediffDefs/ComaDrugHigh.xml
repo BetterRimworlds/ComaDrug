@@ -40,6 +40,9 @@
                     </li>
                 </needs>
             </li>
+            <li Class="BetterRimworlds.ComaDrug.HediffCompProperties_WakeOnHediff">
+                <wakeHediff>WakeUpHigh</wakeHediff>
+            </li>
         </comps>
         <stages>
             <li>
