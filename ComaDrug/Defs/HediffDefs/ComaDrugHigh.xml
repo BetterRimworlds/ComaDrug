@@ -32,6 +32,14 @@
                     </li>
                 </needs>
             </li>
+            <li Class="BetterRimworlds.ComaDrug.HediffCompProperties_ModifyNeedRate">
+                <needs>
+                    <li>
+                        <needDef>Chemical_Luciferium</needDef>
+                        <rateFactor>0.25</rateFactor>
+                    </li>
+                </needs>
+            </li>
         </comps>
         <stages>
             <li>
