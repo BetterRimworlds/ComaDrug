@@ -14,6 +14,24 @@
                 <severityPerDay>-0.18</severityPerDay>
                 <showHoursToRecover>true</showHoursToRecover>
             </li>
+            <!-- A list of needs to maintain -->
+            <li Class="BetterRimworlds.ComaDrug.HediffCompProperties_MinimumNeed">
+                <!-- A list of needs to maintain -->
+                <needs>
+                    <li>
+                        <needDef>Chemical_Luciferium</needDef>
+                        <minLevel>0.05</minLevel>
+                    </li>
+                    <li>
+                        <needDef>Mood</needDef>
+                        <minLevel>1.00</minLevel>
+                    </li>
+                    <li>
+                        <needDef>Joy</needDef>
+                        <minLevel>1.00</minLevel>
+                    </li>
+                </needs>
+            </li>
         </comps>
         <stages>
             <li>
