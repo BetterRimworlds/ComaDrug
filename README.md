@@ -7,11 +7,18 @@ This mod adds the capability to induce medical comas in pawns through a speciali
 keep injured pawns in a stable state, prevent them from experiencing pain, and potentially increase healing efficiency.
 
 ## Features
-- **Medical Coma Drug**: Administer to pawns to induce a controlled medical coma
-- **Reduced Consciousness**: Pawns in a coma have their consciousness reduced to 10%
-- **Complete Immobilization**: Affected pawns cannot move or manipulate objects (0% capacity)
-- **Medical Benefits**: Ideal for critically injured pawns or during complex surgeries
-- **Recovery Process**: Pawns will naturally wake from the coma as the drug wears off
+- **Medical Coma Drug**: Administer to pawns to induce a controlled medical coma.
+- **Duration**: The coma will last 5.55 in-game days.
+- **Reduced Consciousness**: Pawns in a coma have their consciousness reduced to 10%.
+- **Complete Immobilization**: Affected pawns cannot move or manipulate objects (0% capacity).
+- **Medical Benefits**: Ideal for critically injured pawns or during complex surgeries.
+- **Reduced Food Need**: Like in the real world, pawns' hunger need is only 15% of normal (1 meal per treatment).
+- **Reduced Luciferium Need**: The pawn's Luciferium need reduces 75% slower than normal.
+- **Provides Baseline Luciferium**: Luciferium addicts will never fall below 5% of the need.
+- **Rapid Recovery**: Pawns will recover 2x faster from diseases.
+- **Controlled Wakeup**: When administered Wake-Up, the pawn will immediately awaken.
+- **Greater Survival Odds**: By massively reducing the pawn's dietary and Luciferium needs, it greatly increases their
+    surivval odds, especially during times of famine and extreme injury and disease.
 
 ## Installation
 1. Download the latest release from the [GitHub repository](https://github.com/BetterRimWorlds/ComaDrug/releases)
@@ -22,7 +29,6 @@ keep injured pawns in a stable state, prevent them from experiencing pain, and p
 1. **Research**: Complete the "Medical Comas" research project (requires Medicine Production).
 2. **Production**: Craft the coma-inducing drug at a drug lab (requires medicine, devilstrand, and 1 luciferium).
 3. **Administration**: Select the pawn, go to the Health tab, and select "Administer coma drug".
-4. **Duration**: The coma will last approximately 24 in-game hours, depending on the pawn's metabolism.
 5. **Recovery**: Monitor pawns coming out of a coma as they may be disoriented.
 
 The drug is balanced to:
