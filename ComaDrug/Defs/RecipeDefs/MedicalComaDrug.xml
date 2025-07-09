@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <!-- RecipeDef for crafting the Coma Drug -->
+    <RecipeDef>
+        <defName>MakeComaDrug</defName>
+        <label>make coma drug</label>
+        <description>Craft Coma Drug at a Drug Lab.</description>
+        <jobString>Making Coma Drug.</jobString>
+        <effectWorking>Cremate</effectWorking>
+        <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+        <workAmount>400</workAmount>
+        <researchPrerequisite>MedicalComaDrug</researchPrerequisite>
+        <recipeUsers>
+            <li>DrugLab</li>
+        </recipeUsers>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>DevilstrandCloth</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>MedicineIndustrial</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Luciferium</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>DevilstrandCloth</li>
+                <li>MedicineIndustrial</li>
+                <li>Luciferium</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <products>
+            <ComaDrug>1</ComaDrug>
+        </products>
+        <skillRequirements>
+            <Crafting>8</Crafting>
+            <Intellectual>10</Intellectual>
+        </skillRequirements>
+    </RecipeDef>
+    <RecipeDef>
+        <defName>MakeComaDrugBulk</defName>
+        <label>make coma drug x5</label>
+        <description>Craft 5 Coma DrugSynthesis at a Drug Lab.</description>
+        <jobString>Making 5 Coma Drugs.</jobString>
+        <effectWorking>Cremate</effectWorking>
+        <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+        <workAmount>1000</workAmount>
+        <researchPrerequisite>MedicalComaDrug</researchPrerequisite>
+        <recipeUsers>
+            <li>DrugLab</li>
+        </recipeUsers>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>DevilstrandCloth</li>
+                    </thingDefs>
+                </filter>
+                <count>50</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>MedicineIndustrial</li>
+                    </thingDefs>
+                </filter>
+                <count>5</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Luciferium</li>
+                    </thingDefs>
+                </filter>
+                <count>5</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>DevilstrandCloth</li>
+                <li>MedicineIndustrial</li>
+                <li>Luciferium</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <products>
+            <ComaDrug>5</ComaDrug>
+        </products>
+        <skillRequirements>
+            <Crafting>8</Crafting>
+            <Intellectual>10</Intellectual>
+        </skillRequirements>
+    </RecipeDef>
+</Defs>

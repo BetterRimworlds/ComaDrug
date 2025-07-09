@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="DrugPillBase">
+		<defName>ComaDrug</defName>
+		<label>coma drug</label>
+		<description>A neurodegenerative drug that induces a medical coma for 5.55 days.</description>
+		<graphicData>
+			<texPath>Things/Drugs</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<rotatable>false</rotatable>
+		<statBases>
+			<MarketValue>50</MarketValue>
+			<Mass>0.01</Mass>
+		</statBases>
+		<techLevel>Ultra</techLevel>
+		<minRewardCount>1</minRewardCount>
+		<ingestible>
+			<drugCategory>Medical</drugCategory>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>ComaDrugHigh</hediffDef>
+					<!-- <hediffDef>PenoxycylineHigh</hediffDef> -->
+					<severity>1.00</severity>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<listOrder>1000</listOrder>
+				<overdoseSeverityOffset>0.08~0.14</overdoseSeverityOffset>
+			</li>
+		</comps>
+		<tradeTags>
+			<li>ExoticMisc</li>
+		</tradeTags>
+		<thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
+	</ThingDef>
+</Defs>
