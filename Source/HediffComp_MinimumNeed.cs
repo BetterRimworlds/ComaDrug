@@ -1,7 +1,18 @@
-using System.Collections.Generic;
+/*
+ * This file is part of Coma Drug, a Better Rimworlds Project.
+ *
+ * Copyright © 2025 Theodore R. Smith
+ * Author: Theodore R. Smith <hopeseekr@gmail.com>
+ *   GPG Fingerprint: D8EA 6E4D 5952 159D 7759  2BB4 EEB6 CE72 F441 EC41
+ *   https://github.com/BetterRimworlds/ComaDrug
+ *   https://steamcommunity.com/sharedfiles/filedetails/?id=3442966730
+ *
+ * This file is licensed under the Creative Commons CC BY-ND v4.0 License.
+ */
 
 namespace BetterRimworlds.ComaDrug;
 
+using System.Collections.Generic;
 using RimWorld;
 using Verse;
 
@@ -19,13 +30,10 @@ public class HediffComp_MinimumNeed : HediffComp
 
         // We only need to check periodically, not every single tick.
         // Checking every 30 ticks is more than enough and better for performance.
-        if (this.Pawn.IsHashIntervalTick(30))
+        if (this.Pawn.IsHashIntervalTick(60))
         {
             // If the pawn is dead or despawned, do nothing.
-            if (this.Pawn == null || this.Pawn.needs == null)
-            {
-                return;
-            }
+            if (this.Pawn?.needs == null) return;
 
             // Loop through every need defined in our XML properties.
             foreach (var needEntry in Props.needs)

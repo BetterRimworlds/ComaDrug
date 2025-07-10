@@ -14,6 +14,7 @@ namespace BetterRimworlds.ComaDrug;
 
 using System.Collections.Generic;
 using RimWorld;
+using UnityEngine;
 using Verse;
 
 public class NeedRateModifier
@@ -39,7 +40,7 @@ public class HediffComp_ModifyNeedRate : HediffComp
     {
         base.CompPostTick(ref severityAdjustment);
 
-        const int checkInterval = 30;
+        const int checkInterval = 60;
         if (this.Pawn.IsHashIntervalTick(checkInterval))
         {
             if (this.Pawn?.needs == null) return;
@@ -51,7 +52,8 @@ public class HediffComp_ModifyNeedRate : HediffComp
 
                 float fullDropPerTick = need.def.fallPerDay / GenDate.TicksPerDay;
                 float amountToRestorePerTick = fullDropPerTick * (1f - mod.rateFactor);
-                need.CurLevel += amountToRestorePerTick * checkInterval;
+                need.CurLevel = Mathf.Clamp01(need.CurLevel + amountToRestorePerTick * checkInterval);
+
             }
         }
     }
