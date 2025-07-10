@@ -29,6 +29,15 @@ keep injured pawns in a stable state, prevent them from experiencing pain, and p
 2. Extract the contents into your RimWorld/Mods folder
 3. Enable the mod in the game's Mod menu before starting a new game or loading a save
 
+## Use Cases
+
+1. **Lack Luciferium?** and the nearest towns don't have stock? 3 Coma Drugs will last 16.65 days, long enough for the towns to restock. Pawns in medically-induced comas lose their Luciferium Need at 25% of the normal rate (26 days instead of 6.66 at full need) and can never drop below 5% need while on the pill.
+2. **Horribly injured?** The pawns will stay immobilized while their bodies repair themselves.
+3. **Deathly ill?** A medically-induced coma grants a 200% increased immunity speed. They'll probably survive.
+4. **No food?** Pawns in comas, like in real life, require drastically less food. 1 meal is sufficient to feed the pawn for the full treatment (5.55 days). Everyone can go into a coma and survive til The Winter ends.
+5. **Prisoner/Slave Management:** Need to quell a pesky rebellion? Want to transport prisoners to another planet via [the Stargate](https://github.com/BetterRimworlds/Stargate) but they just won't sit still? The coma drug is for you!
+6. **Bad Detox?** Is a colonist throwing a fit because they are detoxxing from Psychite? or the love of their life just died? Coma drug is the humane alternative to double amputations and prison.  Let time heal all wounds while they blissfully slumber.
+
 ## Usage
 1. **Research**: Complete the "Medical Comas" research project (requires Medicine Production).
 2. **Production**: Craft the coma-inducing drug at a drug lab (requires medicine, devilstrand, and 1 luciferium).
