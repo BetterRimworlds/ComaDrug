@@ -18,7 +18,7 @@ keep injured pawns in a stable state, prevent them from experiencing pain, and p
 - **Rapid Recovery**: Pawns will recover 2x faster from diseases.
 - **Controlled Wakeup**: When administered Wake-Up, the pawn will immediately awaken.
 - **Greater Survival Odds**: By massively reducing the pawn's dietary and Luciferium needs, it greatly increases their
-    surivval odds, especially during times of famine and extreme injury and disease.
+    survival odds, especially during times of famine and extreme injury and disease.
 
 ## Installation
 1. Download the latest release from the [GitHub repository](https://github.com/BetterRimWorlds/ComaDrug/releases)

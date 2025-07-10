@@ -57,7 +57,7 @@
     <RecipeDef>
         <defName>MakeComaDrugBulk</defName>
         <label>make coma drug x5</label>
-        <description>Craft 5 Coma DrugSynthesis at a Drug Lab.</description>
+        <description>Craft 5 Coma Drugs at a Drug Lab.</description>
         <jobString>Making 5 Coma Drugs.</jobString>
         <effectWorking>Cremate</effectWorking>
         <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
