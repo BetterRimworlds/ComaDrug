@@ -40,7 +40,7 @@ public class HediffComp_ModifyNeedRate : HediffComp
     {
         base.CompPostTick(ref severityAdjustment);
 
-        const int checkInterval = 60;
+        const int checkInterval = 15;
         if (this.Pawn.IsHashIntervalTick(checkInterval))
         {
             if (this.Pawn?.needs == null) return;

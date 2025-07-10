@@ -29,16 +29,15 @@ public class HediffComp_WakeOnHediff : HediffComp
     {
         base.CompPostTick(ref severityAdjustment);
 
+        // Defensive checks: ensure the pawn and its health tracker exist,
+        // and that a wakeHediff was actually specified in the XML.
+        // If the pawn is dead or despawned, do nothing.
+        if (this.Pawn == null || this.Pawn.health?.hediffSet == null || Props.wakeHediff == null)
+            return;
+
         // For performance, we only check once per second (60 ticks), not every single tick.
         if (this.Pawn.IsHashIntervalTick(60))
         {
-            // Defensive checks: ensure the pawn and its health tracker exist,
-            // and that a wakeHediff was actually specified in the XML.
-            if (this.Pawn?.health?.hediffSet == null || Props.wakeHediff == null)
-            {
-                return;
-            }
-
             // Check if the pawn's list of hediffs contains the one we're looking for.
             if (this.Pawn.health.hediffSet.HasHediff(Props.wakeHediff))
             {

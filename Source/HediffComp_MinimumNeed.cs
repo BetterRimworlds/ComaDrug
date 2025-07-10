@@ -28,13 +28,13 @@ public class HediffComp_MinimumNeed : HediffComp
     {
         base.CompPostTick(ref severityAdjustment);
 
+        // If the pawn is dead or despawned, do nothing.
+        if (this.Pawn == null || this.Pawn.needs == null) return;
+
         // We only need to check periodically, not every single tick.
         // Checking every 30 ticks is more than enough and better for performance.
         if (this.Pawn.IsHashIntervalTick(60))
         {
-            // If the pawn is dead or despawned, do nothing.
-            if (this.Pawn?.needs == null) return;
-
             // Loop through every need defined in our XML properties.
             foreach (var needEntry in Props.needs)
             {
