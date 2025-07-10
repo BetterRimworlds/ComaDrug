@@ -20,7 +20,6 @@
 			<outcomeDoers>
 				<li Class="IngestionOutcomeDoer_GiveHediff">
 					<hediffDef>ComaDrugHigh</hediffDef>
-					<!-- <hediffDef>PenoxycylineHigh</hediffDef> -->
 					<severity>1.00</severity>
 				</li>
 			</outcomeDoers>
