@@ -1,12 +1,14 @@
 # Better Rimworlds: Medical Coma Drug for RimWorld
 
-A Glitter Tech Project by the Better Rimworlds org.
+A www.GlitterWorlds.dev Project by the [**Better Rimworlds org**](https://github.com/BetterRimworlds/).
 
-![CodeRabbit Pull Request Reviews](https://img.shields.io/coderabbit/prs/github/BetterRimworlds/ComaDrug?utm_source=oss&utm_medium=github&utm_campaign=BetterRimworlds%2FComaDrug&labelColor=171717&color=FF570A&link=https%3A%2F%2Fcoderabbit.ai&label=CodeRabbit+Reviews)
+[**Steam Workshop**](https://steamcommunity.com/sharedfiles/filedetails/?id=3442966730)
 
 ## Overview
-This mod adds the capability to induce medical comas in pawns through a specialized drug. Medical comas can be used to 
+This mod adds the capability to induce medical comas in pawns through a specialized drug. Medical comas can be used to
 keep injured pawns in a stable state, prevent them from experiencing pain, and potentially increase healing efficiency.
+
+![ComaDrug Image](https://images.steamusercontent.com/ugc/15304813754967414/91DC405327DA05F80A6C129C6AEFFFC6A3821769/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true)
 
 ## Features
 - **Medical Coma Drug**: Administer to pawns to induce a controlled medical coma.
@@ -55,13 +57,13 @@ The drug is balanced to:
 ## Change Log
 
 **v2.0.0: 2025-07-09**
-* **[2025-07-09 15:38:48 CDT]** Added a mechanism on waking up the pawn with the Wake-Up drug.
-* **[2025-07-09 15:03:15 CDT]** Increased the drug's immunity gain speed by 200%.
-* **[2025-07-09 14:37:49 CDT]** Added a mechanism for reducing any Need at a constant slower or faster rate.
-* **[2025-07-09 10:30:19 CDT]** Added a mechanism for keeping any Need at a constant minimum state and froze Luciferium need.
-* **[2025-07-09 09:04:07 CDT]** Added support for Rimworld v1.6.
-* **[2025-07-09 09:01:10 CDT]** Added support for Rimworld v1.3-v1.5.
-* **[2025-07-08 23:52:20 CDT]** Majorly improved ./build.sh to handle XML changes as well.
+- Added a mechanism on waking up the pawn with the Wake-Up drug.
+- Increased the drug's immunity gain speed by 200%.
+- Added a mechanism for reducing any Need at a constant slower or faster rate.
+- Added a mechanism for keeping any Need at a constant minimum state and froze Luciferium need.
+- Added support for Rimworld v1.6.
+- Added support for Rimworld v1.3-v1.5.
+- Majorly improved ./build.sh to handle XML changes as well.
 
 **v1.0.1: 2025-03-12**
 * **[2025-03-11 23:10:29 CDT]** Fixes to the research config.
