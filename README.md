@@ -41,10 +41,12 @@ The drug is balanced to:
 - Reduces the hunger need by 85% to match real-world conditions.
 
 ## Compatibility
-- Compatible with RimWorld 1.2+.
+- Compatible with RimWorld v1.2-v1.6.
 - Should work alongside most other mods.
 - Not dependent on any other mods.
 - May have interactions with mods that significantly alter consciousness or health systems.
+
+![ComaDrug Sequence Diagram](https://github.com/user-attachments/assets/808f3810-2ef9-4b58-98dd-658d54f7c1e5)
 
 ## Future Plans
 - Add effects of medical comas when the patient is in a hospital bed with a Vitals Monitor.
