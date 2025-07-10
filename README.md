@@ -54,6 +54,15 @@ The drug is balanced to:
 
 ## Change Log
 
+**v2.0.0: 2025-07-09**
+* **[2025-07-09 15:38:48 CDT]** Added a mechanism on waking up the pawn with the Wake-Up drug.
+* **[2025-07-09 15:03:15 CDT]** Increased the drug's immunity gain speed by 200%.
+* **[2025-07-09 14:37:49 CDT]** Added a mechanism for reducing any Need at a constant slower or faster rate.
+* **[2025-07-09 10:30:19 CDT]** Added a mechanism for keeping any Need at a constant minimum state and froze Luciferium need.
+* **[2025-07-09 09:04:07 CDT]** Added support for Rimworld v1.6.
+* **[2025-07-09 09:01:10 CDT]** Added support for Rimworld v1.3-v1.5.
+* **[2025-07-08 23:52:20 CDT]** Majorly improved ./build.sh to handle XML changes as well.
+
 **v1.0.1: 2025-03-12**
 * **[2025-03-11 23:10:29 CDT]** Fixes to the research config.
 * **[2025-03-11 23:10:38 CDT]** Reduce hunger by 85% to match real-world conditions.
