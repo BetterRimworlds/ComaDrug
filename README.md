@@ -2,6 +2,8 @@
 
 A Glitter Tech Project by the Better Rimworlds org.
 
+![CodeRabbit Pull Request Reviews](https://img.shields.io/coderabbit/prs/github/BetterRimworlds/ComaDrug?utm_source=oss&utm_medium=github&utm_campaign=BetterRimworlds%2FComaDrug&labelColor=171717&color=FF570A&link=https%3A%2F%2Fcoderabbit.ai&label=CodeRabbit+Reviews)
+
 ## Overview
 This mod adds the capability to induce medical comas in pawns through a specialized drug. Medical comas can be used to 
 keep injured pawns in a stable state, prevent them from experiencing pain, and potentially increase healing efficiency.
