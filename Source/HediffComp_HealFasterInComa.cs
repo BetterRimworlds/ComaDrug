@@ -22,8 +22,8 @@ public class HediffCompProperties_HealFasterInComa : HediffCompProperties
     /// Multiplier for natural healing speed. 2.0 = 2x healing rate.
     public float healFactor = 10.0f;
 
-    /// Multiplier for addiction withdrawal/detox speed. 2.0 = 2x faster recovery.
-    public float addictionHealFactor = 2.0f;
+    /// Maximum multiplier for addiction withdrawal/detox speed. 2.0 = up to 2x faster recovery.
+    public float addictionHealFactor = 10.0f;
 
     /// Interval in ticks between healing applications. Default: 60 (1 second).
     public int intervalTicks = 60;
@@ -103,12 +103,18 @@ public class HediffComp_HealFasterInComa : HediffComp
 
     private void HealAddictions()
     {
+        // Randomize from 0 to full (Props.addictionHealFactor) in steps of 0.01
+        int maxSteps = (int)System.Math.Round(Props.addictionHealFactor * 100f);
+        float randomizedFactor = Verse.Rand.RangeInclusive(0, maxSteps) / 100f;
+
         // Fraction of a day represented by ONE rare-tick interval.
         // (RareTickInterval / TicksPerDay) * (extra multiplier portion)
         float addictionExtraPerInterval =
             ((float)RareTickInterval / TicksPerDay)
-            * (Props.addictionHealFactor - 1f);
+            * (randomizedFactor - 1f);
 
+        // If the randomized factor rolled <= 1.0, there is no *extra* healing
+        // to apply on top of vanilla for this interval tick.
         if (addictionExtraPerInterval <= 0f) return;
 
         List<Hediff> hediffs = this.Pawn.health.hediffSet.hediffs;
