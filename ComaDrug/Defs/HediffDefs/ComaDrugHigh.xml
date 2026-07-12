@@ -12,6 +12,7 @@
         <isBad>false</isBad>
         <comps>
             <li Class="HediffCompProperties_SeverityPerDay">
+                <!-- Lasts for 5.555 days -->
                 <severityPerDay>-0.18</severityPerDay>
                 <showHoursToRecover>true</showHoursToRecover>
             </li>
@@ -48,6 +49,7 @@
                 <healFactor>5.0</healFactor>
                 <intervalTicks>60</intervalTicks>
             </li>
+            <li Class="BetterRimworlds.ComaDrug.HediffCompProperties_FreezeMemoryThoughts" />
         </comps>
         <stages>
             <li>
