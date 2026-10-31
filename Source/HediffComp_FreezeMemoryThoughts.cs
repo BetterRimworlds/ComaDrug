@@ -139,6 +139,20 @@ public class HediffComp_FreezeMemoryThoughts : HediffComp
         }
     }
 
+    public override void CompExposeData()
+    {
+        base.CompExposeData();
+
+        // Loaded hediffs get CompExposeData(), not CompPostPostAdd(), so the
+        // tracking dictionary starts empty on a reload. Rebuild it once the
+        // whole save has finished loading.
+        if (Scribe.mode == LoadSaveMode.PostLoadInit)
+        {
+            frozenAges.Clear();
+            FreezeCurrentMemories();
+        }
+    }
+
     public override void CompPostPostAdd(DamageInfo? dinfo)
     {
         base.CompPostPostAdd(dinfo);
