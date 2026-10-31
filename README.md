@@ -65,7 +65,17 @@ The drug is balanced to:
 
 ## Change Log
 
-**v2.0.0: 2025-07-09**
+#### v2.1.0
+
+* **[2026-10-31 06:52:11 COT]** Rebuilt frozen memory tracking after loading a save.
+* **[2026-10-31 03:52:36 COT]** Upgraded to Rimworld v1.7.
+* **[2026-07-12 18:19:31 COT]** Freeze thoughts of a patient in a coma.
+* **[2026-07-05 08:13:30 COT]** Variable reduction of addictions.
+* **[2026-07-04 03:05:37 COT]** Now Addictions heal 2x faster while in a coma.
+* **[2025-05-10 12:38:33 COT]** Code improvements.
+* **[2025-05-10 10:48:00 COT]** Increased heal rate by 5x while in a coma.
+
+#### v2.0.0
 - Added a mechanism on waking up the pawn with the Wake-Up drug.
 - Increased the drug's immunity gain speed by 200%.
 - Added a mechanism for reducing any Need at a constant slower or faster rate.
@@ -74,11 +84,11 @@ The drug is balanced to:
 - Added support for Rimworld v1.3-v1.5.
 - Majorly improved ./build.sh to handle XML changes as well.
 
-**v1.0.1: 2025-03-12**
+#### v1.0.1: 2025-03-12
 * **[2025-03-11 23:10:29 CDT]** Fixes to the research config.
 * **[2025-03-11 23:10:38 CDT]** Reduce hunger by 85% to match real-world conditions.
 
-**v1.0.0: 2025-03-11**
+#### v1.0.0: 2025-03-11
 * Initial Release
 
 ## Better Rimworlds Stargate Mods
