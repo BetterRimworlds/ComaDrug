@@ -57,7 +57,7 @@ public class HediffCompProperties_WakeOnHediff : HediffCompProperties
 {
     // This will be set in the XML to the hediff that should trigger the removal.
     // For this case, it will be WakeUpHigh.
-    public HediffDef wakeHediff;
+    public HediffDef wakeHediff = null!;
 
     public HediffCompProperties_WakeOnHediff()
     {
