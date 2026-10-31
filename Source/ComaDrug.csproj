@@ -35,6 +35,12 @@
     <OutputPath>/rimworld/1.2/Mods/ComaDrug/1.6/Assemblies</OutputPath>
     <TargetFramework Condition="'$(TargetFramework)' == 'net9.0'">net472</TargetFramework>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release v1.7'">
+    <TargetFramework>net10.0</TargetFramework>
+    <DefineConstants>RIMWORLD17</DefineConstants>
+    <GenerateDependencyFile>false</GenerateDependencyFile>
+    <OutputPath>/rimworld/1.2/Mods/ComaDrug/1.7/Assemblies</OutputPath>
+  </PropertyGroup>
 
   <!-- Common References -->
   <ItemGroup Condition="'$(TargetFramework)' == 'net472'">
@@ -123,25 +129,43 @@
   </ItemGroup>
   <ItemGroup Condition="'$(Configuration)' == 'Release v1.6'">
     <Reference Include="Assembly-CSharp">
-      <HintPath>/rimworld/1.6-steam/RimWorldLinux_Data/Managed/Assembly-CSharp.dll</HintPath>
+      <HintPath>/rimworld/1.6/RimWorldLinux_Data/Managed/Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine">
-      <HintPath>/rimworld/1.6-steam/RimWorldLinux_Data/Managed/UnityEngine.dll</HintPath>
+      <HintPath>/rimworld/1.6/RimWorldLinux_Data/Managed/UnityEngine.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
-      <HintPath>/rimworld/1.6-steam/RimWorldLinux_Data/Managed/UnityEngine.CoreModule.dll</HintPath>
+      <HintPath>/rimworld/1.6/RimWorldLinux_Data/Managed/UnityEngine.CoreModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.IMGUIModule">
-      <HintPath>/rimworld/1.6-steam/RimWorldLinux_Data/Managed/UnityEngine.IMGUIModule.dll</HintPath>
+      <HintPath>/rimworld/1.6/RimWorldLinux_Data/Managed/UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)' == 'Release v1.7'">
+    <Reference Include="Assembly-CSharp">
+      <HintPath>/rimworld/1.7-steam/Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityStubs">
+      <HintPath>/rimworld/1.7-steam/UnityStubs.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Waylith">
+      <HintPath>/rimworld/1.7-steam/Waylith.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>/rimworld/1.7-steam/Mods/Harmony/1.7/Assemblies/0Harmony.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
 
   <!-- NuGet Packages -->
-  <ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)' != 'net10.0'">
     <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
