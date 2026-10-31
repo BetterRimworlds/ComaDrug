@@ -42,6 +42,12 @@ public class HediffComp_HealFasterInComa : HediffComp
     /// Vanilla rare-tick cadence: one rare tick every 250 game ticks.
     private const int RareTickInterval = 250;
 
+    /// Vanilla natural injury healing runs once per 600 ticks.
+    private const int VanillaHealInterval = 600;
+
+    /// Base severity vanilla natural healing applies per day before modifiers.
+    private const float VanillaBaseHealPerDay = 8f;
+
     private HediffCompProperties_HealFasterInComa Props =>
         (HediffCompProperties_HealFasterInComa)this.props;
 
@@ -71,12 +77,14 @@ public class HediffComp_HealFasterInComa : HediffComp
 
     private void HealInjuries()
     {
-        // Vanilla heals ~0.01 severity per 2500 ticks for injuries.
-        // We only add the *extra* healing on top of vanilla.
+        // Vanilla heals one random naturally-healing injury every 600 ticks.
+        // Spread the configured extra fraction of that same amount over our
+        // faster interval. For a single injury the net rate is healFactor
+        // times vanilla. We only add the *extra* healing on top of vanilla.
         // healFactor=2.0 means 1x extra (vanilla already provides 1x).
         float extraHealAmount =
-            0.01f
-            * ((float)Props.intervalTicks / 2500f)
+            GetVanillaHealAmount()
+            * ((float)Props.intervalTicks / VanillaHealInterval)
             * (Props.healFactor - 1f);
 
         if (extraHealAmount <= 0f) return;
@@ -92,13 +100,63 @@ public class HediffComp_HealFasterInComa : HediffComp
                 injury.CanHealNaturally()
             )
             {
-                injury.Severity -= extraHealAmount;
+                injury.Heal(extraHealAmount);
                 if (injury.Severity <= 0f)
                 {
                     this.Pawn.health.RemoveHediff(injury);
                 }
             }
         }
+    }
+
+    /// <summary>
+    /// Severity vanilla natural healing applies in one 600-tick heal tick,
+    /// including posture, bed, health scale, InjuryHealingFactor, and
+    /// naturalHealingFactor modifiers.
+    /// </summary>
+    private float GetVanillaHealAmount()
+    {
+        if (!this.Pawn.RaceProps.IsFlesh)
+        {
+            return 0f;
+        }
+
+        // Vanilla skips natural healing while the pawn is starving.
+        if (this.Pawn.needs?.food != null && this.Pawn.needs.food.Starving)
+        {
+            return 0f;
+        }
+
+        float healPerDay = VanillaBaseHealPerDay;
+        if (this.Pawn.GetPosture() != PawnPosture.Standing)
+        {
+            healPerDay += 4f;
+            Building_Bed? bed = this.Pawn.CurrentBed();
+            if (bed != null)
+            {
+                healPerDay += bed.def.building.bed_healPerDay;
+            }
+        }
+
+        List<Hediff> hediffs = this.Pawn.health.hediffSet.hediffs;
+        for (int i = 0; i < hediffs.Count; i++)
+        {
+            HediffStage? stage = hediffs[i].CurStage;
+            if (stage != null && stage.naturalHealingFactor != -1f)
+            {
+                healPerDay *= stage.naturalHealingFactor;
+            }
+        }
+
+        float injuryHealingFactor = 1f;
+#if !RIMWORLD12
+        injuryHealingFactor = this.Pawn.GetStatValue(StatDefOf.InjuryHealingFactor);
+#endif
+
+        return healPerDay
+            * this.Pawn.HealthScale
+            * 0.01f
+            * injuryHealingFactor;
     }
 
     private void HealAddictions()
@@ -156,7 +214,10 @@ public class HediffComp_HealFasterInComa : HediffComp
 
     /// Reduces an addiction's severity by the extra amount contributed by
     /// the coma. Vanilla's HediffComp_SeverityPerDay still runs normally,
-    /// so the net effect is (addictionHealFactor)x recovery.
+    /// so the net effect is (addictionHealFactor)x recovery. Addictions
+    /// without a natural recovery rate (Luciferium, Luciferium-addict
+    /// mechanitors, etc.) are left untouched: they never decay in vanilla,
+    /// so speeding them up would permanently cure the dependence.
     private void HealAddiction(Hediff_Addiction addiction, float extraPerInterval)
     {
         HediffComp_SeverityPerDay? severityComp = null;
@@ -173,18 +234,11 @@ public class HediffComp_HealFasterInComa : HediffComp
             }
         }
 
-        float reduction;
+        if (severityComp == null) return;
 
-        if (severityComp != null)
-        {
-            // severityPerDay is NEGATIVE (vanilla decay direction).
-            // Negate it so `reduction` is a positive amount to subtract.
-            reduction = -GetSeverityPerDay(severityComp) * extraPerInterval;
-        }
-        else
-        {
-            reduction = 0.0333f * extraPerInterval;
-        }
+        // severityPerDay is NEGATIVE (vanilla decay direction).
+        // Negate it so `reduction` is a positive amount to subtract.
+        float reduction = -GetSeverityPerDay(severityComp) * extraPerInterval;
 
         if (reduction <= 0f) return;
 
